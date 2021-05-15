@@ -1,8 +1,12 @@
 #version 460
 
+uniform	sampler2D uTexture;
+
 in vec2 fTextureCoords;
+
+layout(location = 0) out vec4 outColor;
 
 void main()
 {
-    gl_FragColor = vec4(fTextureCoords, 0, 1);
+    outColor = vec4(vec3(texture(uTexture, fTextureCoords)), 1);
 }

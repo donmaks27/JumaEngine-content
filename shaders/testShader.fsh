@@ -2,7 +2,9 @@
 
 in vec3 fNormal;
 
+layout(location = 0) out vec4 outColor;
+
 void main()
 {
-    gl_FragColor = vec4(fNormal, 1);
+    outColor = vec4(fNormal, 1);
 }
