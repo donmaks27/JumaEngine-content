@@ -1,8 +1,8 @@
 #version 460
 
-layout(location = 0) uniform sampler2D uTexture;
+layout(binding = 0) uniform sampler2D uTexture;
 
-in vec2 fTextureCoords;
+layout(location = 0) in vec2 fTextureCoords;
 
 layout(location = 0) out vec4 outColor;
 
